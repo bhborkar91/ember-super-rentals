@@ -9,6 +9,7 @@ const App = Ember.Application.extend({
   Resolver
 });
 
+// QUESTION: what does this do?
 loadInitializers(App, config.modulePrefix);
 
 export default App;
