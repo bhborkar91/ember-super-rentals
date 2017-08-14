@@ -1,18 +1,26 @@
 <div class="container">
   <div class="menu">
     {{#link-to 'index'}}
-      <h1>
+      <h1 class="page-header">
         <em>SuperRentals</em>
       </h1>
     {{/link-to}}
-    <div class="links">
-      {{#link-to 'about'}}
-        About
-      {{/link-to}}
-      {{#link-to 'contact'}}
-        Contact
-      {{/link-to}}
-    </div>
+    <nav class="navbar navbar-default" >
+      <div class="container-fluid">
+        <ul class="links nav navbar-nav">
+          <li>
+            {{#link-to 'about'}}
+              About
+            {{/link-to}}
+          </li>
+          <li>
+            {{#link-to 'contact'}}
+              Contact
+            {{/link-to}}
+          </li>
+        </ul>
+      </div>
+    </nav>
   </div>
   <div class="body">
     <!-- outlet indicates where the internal template is rendered
