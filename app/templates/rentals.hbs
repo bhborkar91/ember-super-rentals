@@ -5,7 +5,20 @@
   {{#link-to 'about' class="button"}}
     About Us
   {{/link-to}}
-  {{#each model as |rentalUnit|}}
-    {{rental-listing rental=rentalUnit}}
-  {{/each}}
+  {{#list-filter
+     filter=(action 'filterByCity')
+     as |rentals|}}
+     <!-- this passes the filterByCity action
+     of the rentals controller, to the list-filter component,
+     where it can be invoked, when attempting to filter by city.
+     the key-up of an input is bound to the method handleFilterEntry
+     which internally calls this passed-in method
+     QUESTION: if the action was moved to the route, would it work the same?
+   -->
+    <ul class="results">
+      {{#each rentals as |rentalUnit|}}
+        <li>{{rental-listing rental=rentalUnit}}</li>
+      {{/each}}
+    </ul>
+  {{/list-filter}}
 </div>

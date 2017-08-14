@@ -1,0 +1,8 @@
+{{input value=value
+        key-up=(action 'handleFilterEntry')
+        class="light"
+        placeholder="Filter By City"}}
+{{yield results}}
+<!-- the action comes from the 'rentals' controller.
+so on key-up the component action 'handleFilterEntry' action is triggered.
+go there next. -->
