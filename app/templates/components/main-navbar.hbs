@@ -1,0 +1,13 @@
+<nav class="navbar navbar-pills" >
+  <div class="container-fluid">
+    <ul class="links nav nav-pills">
+    {{#each-in links as |key value|}}
+      <li>
+        {{#link-to key}}
+          {{value}}
+        {{/link-to}}
+      </li>
+    {{/each-in}}
+    </ul>
+  </div>
+</nav>

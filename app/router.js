@@ -1,9 +1,12 @@
 import Ember from 'ember';
 import config from './config/environment';
+import RSVP from 'rsvp';
 
 const Router = Ember.Router.extend({
   location: config.locationType,
   rootURL: config.rootURL
+  // adding a "model" function here does nothing
+  // wonder why?
 });
 // This tells the main ember router which routes to handle
 // for example
